@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe Payment</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f6f9fc; }
+        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        button { background-color: #6772e5; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #5469d4; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Purchase Product</h1>
+        <p>Price: $20.00</p>
+        <form action="/create-checkout-session" method="POST">
+            <button type="submit" id="checkout-button">Checkout with Stripe</button>
+        </form>
+    </div>
+</body>
+</html>
